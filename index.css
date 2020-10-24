@@ -94,7 +94,13 @@ body{
     margin-top: -100px;
     display: flex;
     justify-content: space-evenly;
+    visibility: hidden;
 
+}
+@media only screen and (max-width:800px){
+    #mobile-game-pad{
+        visibility: visible;
+    }
 }
 #up-arrow{
     width: 60px;
