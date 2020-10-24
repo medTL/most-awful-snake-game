@@ -45,7 +45,7 @@ function checkDeath(){
 function restartGame() {
     const restart = document.getElementById('restart');
     restart.addEventListener('click' , () =>{
-        window.location = '/';
+        window.location.reload();
     })
 }
 
