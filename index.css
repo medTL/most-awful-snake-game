@@ -1,0 +1,134 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+    margin: 0;
+    background-color: black;
+
+}
+
+#game-board{
+    background-color: #ccc;
+    width: 100vmin;
+    height: 100vmin;
+    display: grid;
+    grid-template-columns: repeat(21, 1fr);
+    grid-template-rows: repeat(21, 1fr);
+
+}
+
+.snake{
+    background-color: hsl(200, 100%, 50%);
+    border: .25vmin solid black;
+    display:grid;
+    place-items: center;
+}
+.snake-head{
+    display: flex;
+    justify-content: center;
+}
+.snake-eye{
+    background-color: #000;
+    z-index: 999;
+    position: relative;
+    border-radius: 50%;
+    width: .5em;
+    height: .5em;
+    margin: 2px;
+}
+
+.food{
+    background-color: hsl(0, 100%, 50%);
+    border: .25vmin solid black;
+    border-radius: 50%;
+}
+
+#game-panel {
+    width: 50vmin;
+    height: 250px;
+    box-sizing: content-box;
+    margin: 0;
+    background-color: #3992db;
+    color: #ffffff;
+    display: grid;
+    grid-template-rows: 70% 15% 15%;
+    grid-template-columns: 1fr;
+    padding: 10px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -12.5vmin;
+    margin-left: -25vmin;
+    z-index: 9999;
+    visibility: hidden;
+}
+.panel-message{
+    font-size: 2rem;
+   margin: 0;
+   display: grid;
+   place-items: center;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+   
+}
+.panel-text{
+    font-size: 16px;
+    text-align: left;
+}
+
+.panel-button{
+    background-color: rgb(48, 194, 34);
+    color: #ffffff;
+    width: 100%;
+    height: 40px;
+    padding: 10px;
+    float:right;
+    border: 2px solid #000;
+}
+#mobile-game-pad{
+    width: 100%;
+    height: 200px;
+    position: absolute;
+    z-index: 999;
+    top: 100%;
+    margin-top: -100px;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+#up-arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url(./assets/arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-grow: 1 1 60px;
+}
+
+#down-arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url(./assets/arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(180deg);
+    flex-grow: 1 1 60px;
+}
+#left-arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url(./assets/arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(-90deg);
+    flex-grow: 1 1 60px;
+}
+#right-arrow{
+    width: 60px;
+    height: 60px;
+    background-image: url(./assets/arrow.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform: rotate(90deg);
+    flex-grow: 1 1 60px;
+}
